@@ -6,7 +6,7 @@ Esse projeto cria um servidor web com Nginx na Cloud AWS. As credenciais de aces
 
 <h1>Instalar o Packer no Linux</h1>
 
-docker run -it -v /home/seu_user/packer:/conf -w /conf --restart=always --entrypoint  "" hashicorp/packer:light sh
+$ docker run -it -v /home/seu_user/packer:/conf -w /conf --restart=always --entrypoint  "" hashicorp/packer:light sh
 
 <h2>Exportando suas credenciais na AWS</h2>
 
