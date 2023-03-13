@@ -1,0 +1,33 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "ami_name": "Ubuntu-Nginx",
+            "region": "us-east-1",
+            "source_ami": "ami-0557a15b87f6559cf",
+            "instance_type": "t2.micro",
+            "ssh_username": "ubuntu",
+            "tags": {
+                "OS_Version": "Ubuntu",
+                "Release": "Latest",
+                "Base_AMI_Name": "{{ .SourceAMIName }}",
+                "Extra": "{{ .SourceAMITags.TagName }}"
+              }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "script.sh"
+        },
+        {
+            "type": "file",
+            "source": "index.html",
+            "destination": "/tmp/"
+        },
+        {
+            "type": "shell",
+            "inline": ["sudo cp /tmp/index.html /var/www/html/"]
+        }
+    ]
+}
