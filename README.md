@@ -17,9 +17,9 @@ $ export AWS_SECRET_ACCESS_KEY="suasecretkey"
 
 $ packer build projetc.json
 
-<h2>Documentação</h2>
+<p><h2>Documentação</h2></p>
 
-https://developer.hashicorp.com/packer/plugins/builders/amazon/ebs
+<p>Documentação - <a href="https://developer.hashicorp.com/packer/plugins/builders/amazon/ebs/" target="_blank">Hashicorp</a>.</p>
 
 
 
